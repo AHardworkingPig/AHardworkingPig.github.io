@@ -1,18 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang=zh-Hans><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/favicon.ico><title>HJL's BLOG</title><style>.ie-not-supported {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
 
-<head>
-  <meta charset="UTF-8">
-  <link rel="icon" href="/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vite App</title>
-  <link rel="stylesheet" href="/style.d1f24734.css">
-</head>
+    .ie-not-supported::after {
+      content: '不支持IE浏览器';
+      font-size: 20px;
+    }</style><style>.not-supported-javascript {
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      box-sizing: border-box;
+    }
 
-<body>
-  <div id="app"></div>
+    .not-supported-javascript::after {
+      content: '请打开JavaScript权限';
+      font-size: 24px;
+      font-weight: 400;
+    }
 
-  <script type="module" src="/index.6a3f4b3c.js"></script>
-</body>
+    @media screen and (max-width: 500px) {
+      .not-supported-javascript::after {
+        font-size: 16px;
+      }
+    }</style><script>document.addEventListener('DOMContentLoaded', function () {
+      function isIE() {
+        if (!!window.ActiveXObject || "ActiveXObject" in window) {
+          return true;
+        } else {
+          return false;
+        }
+      }
 
-</html>
+      // 不支持ie浏览器
+      if (isIE()) {
+        // 针对IE11,其他版本不考虑
+        console.log('不支持IE浏览器，都' + new Date().getFullYear() + '年了，该换浏览器了！！！');
+        const str =
+          '<div class="ie-not-supported"></div>';
+        const app = document.querySelector('#app');
+        // IE11不支持remove方法
+        app.parentNode.removeChild(app);
+        document.querySelector('body').innerHTML = str;
+      }
+    });</script><link href=/js/chunk-0513139c.8f0eaa12.js rel=prefetch><link href=/js/chunk-724b6e78.d68aa692.js rel=prefetch><link href=/js/app.b4845a59.js rel=preload as=script><link href=/js/chunk-vendors.6787c0c8.js rel=preload as=script></head><body><noscript><strong class=not-supported-javascript></strong></noscript><div id=app></div><script src=/js/chunk-vendors.6787c0c8.js></script><script src=/js/app.b4845a59.js></script></body></html>
